@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>交大120週年校慶精神口號徵選活動</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <style>
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+#Thumbnail{
+	width:100%;
+}
+
+@media screen and (min-width: 1200px) {
+    #Thumbnail{
+		//height:196.875px;
+	    height:376.875px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #Thumbnail{
+		//height:159.375px;
+		height:300px;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+    #Thumbnail{
+		//height:118.125px;
+		height:220px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+    #Thumbnail{
+		//height:300px;
+		height:570px;
+	}
+}
+
+.about_li{
+	list-style:none; 
+	//display:inline;
+}
+
+.about_h3{
+	//display:inline;
+}
+
+hr{
+	border: 1px solid black;
+}
+	</style>
+</head>
+
+<body id="page-top" class="index">
+    <!-- Navigation 2059A6 -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#194785">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a class="navbar-brand" href="./" style="padding-top:5px;">
+                <img src="./img/NCTU logo_y.png" style="display:inline-block; width:250px; height:50px; margin-right:10px;"></img>
+				<span><!-- title --></span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">徵文啟事</a>
+                    </li>
+					<li class="page-scroll">
+                        <a href="#download">報名資料下載</a>
+                    </li>
+					<li class="page-scroll">
+							  <a href='logout.php'>登出【 李姿宜 】</a></li>					<li class="page-scroll"><a href="#upload">上傳作品</a></li>					<li class="page-scroll">
+					    <a href="#contact">活動聯絡</a>
+					</li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header 43A8D2 -->
+    <header style="background: url('./img/baseball.jpg'); background-repeat: no-repeat; background-size: 100% 100%; background-color:#E4353A; ">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text" style="margin-top:120px; margin-bottom:120px;">
+                        <span class="name">《交大雙甲子‧敬‧我們的美好時光》徵文</span>
+                        <hr class="star-light">
+                    </div>
+					<!--<img class="img-responsive" style="visibility: hidden;" src="data:image/png;base64,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" alt="">                    
+                --></div>
+            </div>
+        </div>
+    </header>
+	
+
+    <!-- About Section -->
+    <section class="success" id="about" style="background:#234F9A;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 style="color:white;">徵文啟事</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+					<div style="font-size:18px; background-color:#234F9A; color:white; border:1px solid #234F9A;">
+					<h3 class="about_h3">【緣起】</h3>
+					<ul>
+					  <li class="about_li">民國105年為本校創立120週年的重要年度，為慶祝此一盛事，特舉辦本徵文活動，期能募集所有交大人的校園記憶，共同記錄關於交大的校園生活點滴，增進交大人互動，並喚起心底的美好青春時光。</li>
+					</ul>
+					</br>
+					<h3 class="about_h3">【徵文對象】</h3>
+					<ul>
+					  <li class="about_li">所有廣義交大人，包括現就讀於交大、曾經在交大就讀的學生、在職生，以及教師（含退休教師）、職員。</li>
+					</ul>
+					</br>
+					<h3 class="about_h3">【徵文主題】</h3>
+					<ul>
+					  <li class="about_li">募集交大人的二十篇校園記憶，聊住宿、梅竹、社團、課堂、比賽、交友、娛樂。可任選以下子題書寫。</li>
+					</ul>
+					<ul>
+					  <li class="about_li">子題：</li>
+					  <li class="about_li">◎當我還是新鮮人：還記得你到交大第一天，是什麼模樣？鬧過什麼笑話？或是有什麼永生難忘的回憶。</li>
+					  <li class="about_li">◎那年的梅竹最難忘：每個交大人心中，一定有一至多場難忘的梅竹賽，你的那場呢？</li>
+					  <li class="about_li">◎我的室友是天兵：同在一間房裡，曾遇到什麼困難與幫助，發生過什麼好笑的故事與記憶。你也曾熬夜連線破關嗎？有沒有宿舍秘辛要來爆料呢？</li>
+					  <li class="about_li">◎我的同學大不同：你有交換生的同學嗎？或你就是交換生？是否因為雙方的求學環境差異，而發生過什麼趣事或糗事呢？</li>
+					  <li class="about_li">◎讀大學就是要瘋社團：每個年代都有不一樣的社團，你曾經參加過哪些社團，又有什麼好玩的事發生？</li>
+					  <li class="about_li">◎「食」在交大：屹立不搖的小木屋鬆餅、曾為全台業績最佳的小七、為什麼到多多不是喝多多？你的學生時代，最愛或最恨的交大校園美食是什麼？</li>
+					  <li class="about_li">◎誰說交大沒帥哥：校園裡有約會聖地嗎？你的初戀在交大嗎？那段刻苦銘心的校園戀愛你還記得嗎？</li>
+					  <li class="about_li">◎爭取榮譽是我們唯一的信念：參加校內外比賽的甘苦談。</li>
+					  <li class="about_li">◎除了傳道、授業，交大老師給我多更多：談對自己影響至深的老師，或有趣的交大老師。</li>			  
+					</ul>
+					</br>
+					<h3 class="about_h3">【徵文期間】</h3>
+				    <ul>
+				  	  <li class="about_li">即日起至2015年12月15日止</li>
+				    </ul>
+					</br>
+					<h3 class="about_h3">【投稿辦法】</h3>
+					<ul>
+					  <li class="about_li">1.請提供word電子檔，A4、橫排、細明體、字級12級，照片請提供電子檔（解析度300dpi以上的jpg或tiff檔，其他檔案恕不受理）。</li>  
+					  <li class="about_li">2.檔案請上傳至交大一百二十週年校慶活動官網《交大雙甲子‧敬‧我們的美好時光》出版品徵稿頁面，並請同步E-mail至lyujen@nctu.edu.tw信箱，電子郵件主旨請註明「參加校慶刊物徵文」。</li>
+					  <li class="about_li">3.採審稿制，錄用或不錄用均以e-mail通知。</li>
+					  <li class="about_li">4.稿件務必包含：</li>
+					  <ul>
+				  	    <li class="about_li">(1)報名表、著作授權同意書。（請填妥附件一、二，授權同意書須寄回正本，如無寄回則視為放棄投稿）</li>
+				        <li class="about_li">(2)標題、內文1200至1800字以內。請以word檔繳交。</li>
+				        <li class="about_li">(3)照片。一至三張，解析度需為300dpi以上。請以jpg檔繳交。</li>
+					  </ul>
+					</ul>
+					</br>
+					<h3 class="about_h3">【評選方式】</h3>
+					<ul>
+					  <li class="about_li">(一)評選:</li>  
+					  <ul>
+						<li class="about_li">將聘請相關專業人士組成評選委員會，負責評選相關事宜，評分標準：</li>
+						<li class="about_li">主題切合性（20%）</li>
+						<li class="about_li">文章結構與流暢度（40%）</li>
+						<li class="about_li">文字情感表達力（40%）</li>
+					  </ul>
+					</ul>
+					</br>
+					<h3 class="about_h3">【獎勵】</h3>
+					<ul>
+					  <li class="about_li">1.入選文章將收錄於《交大雙甲子‧敬‧我們的美好時光》專書（書名暫定），首獎獎金貳萬元、貳獎獎金壹萬貳仟元、參獎獎金陸仟元，其餘入選者將致贈貳仟元稿酬。專書預計於2016年4月出版。每位入選文章作者並可獲贈紀念專書乙本。</li>  
+					  <li class="about_li">2.凡參加投稿者（未入選），將於活動結束後隨機抽出3名，每名可獲得交大120校慶限量紀念鋼筆一只（含精美盒裝）。其餘則贈送精美禮品一組。</li>
+					</ul>
+					</br>
+					<h3 class="about_h3">【注意事項】</h3>
+					<ul>
+					  <li class="about_li">1.投稿文章須為未發表或未刊登，勿一稿多投。須親自創作，無抄襲、複製、剽竊、侵害他人之著作，若有發生侵害第三人權利之行為，導致校方權利受損，投稿者須負全權負擔損害賠償責任。如有圖文涉及他人著作權，須先徵得原作者或出版者同意，並附同意書證明。</li>  
+					  <li class="about_li">2.主辦單位得就原稿內容之錯別字、標點符號、文句語意不夠明晰之處進行修訂。此外顧及書籍整體的完整性，主辦單位對文章標題亦可進行修訂。其他則無權更動。</li>
+					  <li class="about_li">3.繳交稿件即視為同意無償授權主辦單位進行重製、下載或公開展示等。並將入選稿件專屬授權予交通大學，並同意協助校對事宜。</li>
+					  <li class="about_li">4.本活動贈品不得要求轉換、轉讓或折換現金。</li>
+					  <li class="about_li">5.參加本活動之同時，即表示同意主辦單位得因本活動之需要依（電腦處理）個人資料保護法蒐集、處理、利用其個人資料。</li>
+					  <li class="about_li">6.主辦單位保有修改、變更或暫停本活動之權利，如有未盡事宜，悉依主辦單位相關規定或解釋辦理，並得隨時補充公告之。</li>
+					</ul>
+
+					</div>
+				</div>       
+            </div>
+        </div>
+    </section>
+
+	<!-- Contact Section -->
+	    <section id="upload" style="background-color:white; color:black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>檔案上傳</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+					<form name="sendupload" id="contactForm" method="post" action="essayupload.php" enctype="multipart/form-data">
+                        <div class="row control-group">						
+							<hr/>
+							<div style="padding:15px;">
+							  <span style="font-size:20px;">報名表</span>
+							  <input name="candidate_consent" id="candidate_consent" type="file"/>
+							</div>
+							<hr/>
+							<div style="padding:15px;">
+							  <span style="font-size:20px;">著作授權同意書</span>
+							  <input name="candidate_Authorize" id="candidate_Authorize" type="file"/>
+							</div>
+							<hr/>
+							<div style="padding:15px;">
+							  <span style="font-size:20px;">標題、內文</span>
+							  <input name="candidate_content" id="candidate_content" type="file"/>
+							</div>							
+							<hr/>
+							<div style="padding:15px;">
+							  <span style="font-size:20px;">照片1</span>
+							  <input name="candidate_photo" id="candidate_photo" type="file"/>
+							</div>
+							<hr/>	
+							<div style="padding:15px;">
+							  <span style="font-size:20px;">照片2</span>
+							  <input name="candidate_photo2" id="candidate_photo2" type="file"/>
+							</div>
+							<hr/>	
+							<div style="padding:15px;">
+							  <span style="font-size:20px;">照片3</span>
+							  <input name="candidate_photo3" id="candidate_photo3" type="file"/>
+							</div>
+							<hr/>								
+                        </div>
+                        <!--<div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>作品介紹</label>
+                                <textarea name="introduction" rows="5" class="form-control" placeholder="作品介紹" id="message" required data-validation-required-message="請輸入作品介紹"></textarea>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>-->
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <button type="submit" value="Upload Image" name="submit" class="btn btn-success btn-lg">繳交 送出</button>
+								<span style="color:red; margin-left:65px; font-size:20px;">單一檔案上傳限制為5MB</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+		
+    <!-- download Section -->
+    <section id="download" style="color:black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center" style="font-size:18px; background-color:white; color:black; border:1px solid white;">
+                    <h2>活動辦法及相關報名資料下載</h2>
+					<hr class="star-primary">
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px;">
+                <div class="col-lg-8 col-lg-offset-2">
+				    <h3><a style="color:black; text-decoration:underline;" href="./file/徵文啟事20151014.docx">活動辦法</a></h3>
+					<h3><a style="color:black; text-decoration:underline;" href="./file/交大創校120年校慶紀念刊物徵文報名表.docx">交大創校120年校慶紀念刊物徵文報名表</a></h3>
+					<h3><a style="color:black; text-decoration:underline;" href="./file/交大創校120年校慶紀念刊物徵文授權同意書.docx">交大創校120年校慶紀念刊物徵文授權同意書</a></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+    <!-- Footer -->
+    <footer id="contact" class="text-center" style="background-color:#234F9A;">
+        <div class="footer-above" style="background-color:#234F9A;">
+            <div class="container">
+                <div class="row">
+					<div class="text-left footer-col col-md-6 col-lg-offset-3" style="text-align:center;">
+<pre style="background-color:#234F9A; border:#234F9A solid; color:white; font-size:18px;">
+<h3 style="margin-bottom:0px; ">活動聯絡</h3>
+主辦單位：國立交通大學秘書室、國立交通大學出版社
+連絡窗口：交大出版社　林妤珍 小姐　
+連絡電話：03-5712121分機50166
+連絡信箱：<a href="mailto:lyujen@nctu.edu.tw"><font color="white"><u>lyujen@nctu.edu.tw</font></u></a>
+</pre>
+					</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+<pre style="background-color:#233140; border:#233140 solid; color:white;">
+國立交通大學 | 新竹市大學路1001號 | +886-3-5712121,1-800-409-9811 (從美國撥打)
+Copyright &copy; 2015 National Chiao Tung University All rights reserved
+</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <!--<script src="js/contact_me.js"></script>-->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js"></script>
+</body>  
+<script>
+	$('form[name="sendupload"]').submit(function () {
+		var candidate_consent = $.trim($("input[name='candidate_consent']").val());
+		var candidate_Authorize = $.trim($("input[name='candidate_Authorize']").val());
+		var candidate_content = $.trim($("input[name='candidate_content']").val());
+		var candidate_photo = $.trim($("input[name='candidate_photo']").val());
+		var candidate_photo2 = $.trim($("input[name='candidate_photo2']").val());
+		var candidate_photo3 = $.trim($("input[name='candidate_photo3']").val());
+		var found = false;
+			if(candidate_consent.length > 0 &&
+			   candidate_content.length > 0 &&
+			   candidate_Authorize.length > 0 &&
+			   (candidate_photo.length > 0 || candidate_photo2.length > 0 || candidate_photo3.length > 0))
+			{
+			   return true;
+			}
+			else
+			{
+			  var error_msg = "請上傳:\n\n";
+			  
+			  if(candidate_consent.length<=0)
+			  {
+			    error_msg += "活動報名表\n";
+			  }
+			  if(candidate_content.length<=0)
+			  {
+			    error_msg += "參加作品(doc.檔)\n";
+			  }
+			  if(candidate_Authorize.length<=0)
+			  {
+			    error_msg += "著作授權同意書\n";
+			  }
+			  
+			  if(candidate_photo.length == 0 && candidate_photo2.length == 0 && candidate_photo3.length ==0)
+			  {
+				error_msg += "至少上傳一張照片";
+			  }
+			  alert(error_msg);
+			  return false;
+			}
+			//return false;
+	});
+</script>
+</html>

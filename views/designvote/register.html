@@ -1,0 +1,151 @@
+
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>交大120週年校慶LOGO徵選競賽</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+  </head>
+
+  <body>
+<div id="content">
+  <div class="container">
+    <form name="register" action="register.php" method="post" class="form-horizontal" name="send">
+      <div class="row">
+        <h1 class="col-md-12 col-xs-12 page_title col-centered" style="padding-bottom:30px; text-align:center;">註冊</h1>
+      </div>
+      <div class="col-md-6 col-md-offset-3 col-xs-10 col-xs-offset-1 register" style="color:red; font-size:24px;">
+            <div class="form-group">
+              <label for="username" class="col-sm-2 control-label">*</label>
+              <div class="col-sm-8">
+                <div >
+					<input id="account" type="text" class="form-control" name="account" placeholder="帳號" required data-validation-required-message="請輸入帳號">
+				</div>
+            </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">*</label>
+              <div class="col-sm-8">
+                <div>
+					<input type="password" class="form-control" name="password" placeholder="密碼" required data-validation-required-message="請輸入密碼">
+				</div>
+            </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">*</label>
+              <div class="col-sm-8">
+                <div>
+					<input type="text" class="form-control" name="department" placeholder="科系/單位/畢業系級(在校生/教職員/校友)" required data-validation-required-message="請輸入科系班別/服務單位">
+				</div>
+            </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">*</label>
+              <div class="col-sm-8">
+                <div>
+					<input id="student_id" type="text" class="form-control" name="student_id" placeholder="學號/工號/身分證字號(在校生/教職員/校友)" required data-validation-required-message="請輸入學號/工號">
+				</div>
+            </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">*</label>
+              <div class="col-sm-8">
+                <div>
+					<input type="text" class="form-control" name="name" placeholder="姓名" required data-validation-required-message="請輸入姓名">
+				</div>
+            </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">*</label>
+              <div class="col-sm-8">
+                <div>
+					<input type="text" class="form-control" name="phone" placeholder="手機" required data-validation-required-message="請輸入手機">
+				</div>
+            </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label"></label>
+              <div class="col-sm-8">
+                <div>
+					<input type="text" class="form-control" name="extension" placeholder="聯絡電話" >
+				</div>
+            </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-sm-2 control-label">*</label>
+              <div class="col-sm-8">
+                <div>
+					<input type="text" class="form-control" name="email" placeholder="信箱" required data-validation-required-message="請輸入有效信箱">
+				</div>
+            </div>
+            </div>
+			<div class="row">
+				<div class="col-md-3 col-xs-12 col-md-offset-3 " style="margin-bottom:30px;">
+					<button type="submit" class="btn btn-info btn-block"><span class="glyphicon glyphicon-arrow-right"></span><b>&nbsp&nbsp提交&nbsp&nbsp</b>
+					</button>
+				</div>
+				<div class="col-md-3 col-xs-12">
+					<button type="button" class="btn btn-info btn-block" onClick="history.go(-1);"><span class="glyphicon glyphicon-share-alt"></span><b>&nbsp&nbsp返回&nbsp&nbsp</b>
+					  </button>
+				</div>
+			</div>
+			<div class="row">
+			    <div class="col-md-12 col-xs-12 " style="margin-bottom:15px; font-size:16px; color:red;" align="center">
+				    *為必填欄位
+				</div>
+				<div class="col-md-12 col-xs-12 " style="margin-bottom:15px; font-size:16px; color:red;" align="center">
+					個資聲明:本活動網站所蒐集之活動報名者之姓名、學號、身份證字號、連絡電話、手機、信箱等相關資訊，僅供報名參加、活動聯絡及活動過程必要公開之作者、作品資訊(含公開票選過程及得獎名單公布等)，並不做其他用途，以上內容皆同意後始得報名參加本活動。
+				</div>
+			</div>
+	</form>
+	</div>
+<script src="js/jquery.js"></script>
+<script>
+	$('form[name="register"]').submit(function () {
+		var account = $.trim($("input[name='account']").val());
+		var student_id = $.trim($("input[name='student_id']").val());
+		
+		var found = false;
+			$.ajax({
+				async: false,
+				type: 'POST',
+				url: "accountcheck.php",
+				data: { account: account, student_id: student_id },
+				success: function(data) {
+					if(data == 'true')
+					{
+						found = "true";
+					}
+					else
+					{
+					    found = data;
+					}
+				}
+			});
+			
+			if(found == "true")
+			{
+			  return true;	
+			}
+			else if(found == "account")
+			{
+			  alert("這個帳號已經註冊過了");
+			  $("#account" ).focus();
+			  return false;
+			}
+			else if(found == "studentId")
+			{
+			  alert("這個(學號/工號/身分證字號)已經註冊過了");
+			  $("#student_id" ).focus();
+			  return false;
+			}
+			
+			event.preventDefault();
+	});	
+</script>
+</body></html>

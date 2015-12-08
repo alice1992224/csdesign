@@ -1,0 +1,54 @@
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+}
+.fileUpload input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+#Thumbnail{
+	width:100%;
+}
+
+@media screen and (min-width: 1200px) {
+    #Thumbnail{
+		height:196.875px;
+	    //height:376.875px;
+	}
+}
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    #Thumbnail{
+		height:159.375px;
+		//height:300px;
+	}
+}
+@media screen and (min-width: 767px) and (max-width: 991px) {
+    #Thumbnail{
+		height:118.125px;
+		//height:220px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+    #Thumbnail{
+		height:300px;
+		//height:570px;
+	}
+}
+
+.about_li{
+	list-style:none; 
+	//display:inline;
+}
+
+.about_h3{
+	//display:inline;
+}

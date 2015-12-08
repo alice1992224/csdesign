@@ -1,0 +1,716 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>交大資訊工程系系徽LOGO徵選競賽</title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="/stylesheets/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/stylesheets/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="page-top" class="index">
+    <!-- Navigation 2059A6 -->
+    <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#1E405D">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a class="navbar-brand" href="./" style="padding-top:5px;">
+                <img src="/images/logo.png" style="display:inline-block; width:250px; height:50px; margin-right:10px;"></img>
+				<span><!-- title --></span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+					<li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/">首頁</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#upload">報名資料填寫</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#download">報名資料下載</a>
+					<li class="page-scroll">
+					    <a href="#contact">活動聯絡</a>
+					</li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header 43A8D2 -->
+    <header style="background: url('/images/seagull.jpg'); background-repeat: no-repeat; background-size: 100% 100%; background-color:#E4353A";>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                     <div class="intro-text" style="margin-top:120px; margin-bottom:120px;">
+                        <span class="name">系徽徵選活動</span>
+                        <!--<hr class="star-light">-->
+                        <!--<span class="skills">~Vote the best LOGO~</span>-->
+                    </div>
+				</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->    
+
+    <!-- Upload Section -->
+    <section id="upload" style="background-color:white; color:black;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>報名資料填寫</h2>
+                    <br>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+					<form name="sendupload" id="contactForm" method="post" action="upload_data">
+                        <div class="row control-group">						
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>科系班別 / 服務單位 department/service units</label>
+                                <input name="department" type="text" autocomplete="off" class="form-control" placeholder="科系班別 / 服務單位 department/service units" id="name" required data-validation-required-message="請輸入科系班別 department">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <hr>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>學號 / 工號 student ID number /employee ID number</label>
+                                <input name="student_id" type="text" autocomplete="off" class="form-control" placeholder="學號 / 工號 / 身分證字號(校友) student ID number /employee ID number" id="name" required data-validation-required-message="請輸入學號 student ID">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <hr>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>姓名 name</label>
+                                <input name="name" type="text" autocomplete="off" class="form-control" placeholder="姓名 name" id="name" required data-validation-required-message="請輸入姓名 name">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <hr>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>手機 phone</label>
+                                <input name="phone" type="text" autocomplete="off" class="form-control" placeholder="手機 phone" id="name" required data-validation-required-message="請輸入手機 phone">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <hr>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>聯絡電話 / 分機 extension number</label>
+                                <input name="ext_number" type="text" autocomplete="off" class="form-control" placeholder="聯絡電話 / 分機 extension number" id="name" required data-validation-required-message="請輸入聯絡電話 extension number">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <hr>
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>E-mail</label>
+                                <input name="email" type="text" autocomplete="off" class="form-control" placeholder="E-mail" id="name" required data-validation-required-message="請輸入E-mail">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                           <hr>
+
+                            <div style="padding:15px;">
+							  <span style="font-size:20px;">報名表</span>
+							  <input name="candidate_registerform" id="candidate_registerform" type="file"/>
+							</div>
+							<hr/>
+							<div style="padding:15px;">
+							  <span style="font-size:20px;">作品圖片及理念說明</span>
+							  <input name="candidate_explanation" id="candidate_explanation" type="file"/>
+							</div>
+							<hr/>
+							<div style="padding:15px;">
+							  <span style="font-size:20px;">活動同意書</span>
+							  <input name="candidate_consent" id="candidate_consent" type="file"/>
+							</div>							
+							<hr/>
+							<div style="padding:15px;">
+							  <span style="font-size:20px;">競賽作品</span>
+							  <input name="candidate_photo" id="candidate_photo" type="file"/>
+							</div>
+							<hr/>
+                        </div>
+                        <br>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="form-group col-xs-12">
+                                <input type="submit" value="繳交送出" name="submit" class="btn btn-success btn-lg">
+								<span style="color:red; margin-left:65px; font-size:20px;">單一檔案上傳限制為5MB</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- download Section -->
+    <section id="download" style="background-color:rgba(41, 88, 127, 0.85)">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center" style="font-size:18px; background-color:rgb(72, 112, 146); color:white; border:1px solid rgb(72, 112, 146);">
+                    <h2>活動辦法及相關報名資料下載</h2>
+					<br>
+                </div>
+            </div>
+            <div class="row" style="margin-top:30px;">
+                <div class="col-lg-8 col-lg-offset-2">
+				    <h3><a style="color:white; text-decoration:underline;" href="./file/資訊工程學系系徽徵選活動辦法.docx">活動辦法</a></h3>
+					<h3><a style="color:white; text-decoration:underline;" href="./file/資訊工程學系系徽徵選活動報名表.docx">資訊工程學系系徽徵選活動報名表</a></h3>
+					<h3><a style="color:white; text-decoration:underline;" href="./file/資訊工程學系系徽徵選活動作品圖片及理念說明.docx">資訊工程學系系徽徵選活動作品圖片及理念說明</a></h3>
+					<h3><a style="color:white; text-decoration:underline;" href="./file/資訊工程學系系徽徵選活動同意書.docx">資訊工程學系系徽徵選活動同意書</a></h3>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+    <!-- Contact Section -->
+	
+
+	
+    <!-- Footer -->
+    <footer id="contact" class="text-center" style="background-color:#29587F;">
+        <div class="footer-above" style="background-color:#29587F;">
+            <div class="container">
+                <div class="row">
+					<div class="text-left footer-col col-md-6 col-lg-offset-3"  style="text-align:center;">
+						<pre style="background-color:#29587F; border:#29587F solid; color:white; font-size:18px;">
+						<h3 style="margin-bottom:0px;">活動聯絡</h3>
+						國立交通大學資訊工程學系 陳小姐
+						電話:03-5712121*56606
+						<a href="mailto:htchen@cs.nctu.edu.tw"><font color="white"><u>E-mail:htchen@cs.nctu.edu.tw</font></u></a>
+						地址:30010新竹市大學路1001號國立交通大學資訊工程學系工程三館343室
+						</pre>
+					</div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+						<pre style="background-color:#233140; border:#233140 solid; color:white;">
+						國立交通大學 | 新竹市大學路1001號 | +886-3-5712121,1-800-409-9811 (從美國撥打) 
+						Copyright &copy; 2015 National Chiao Tung University All rights reserved 
+						</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visible-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modal modal fade" id="011105" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>交大120週年校慶標誌</h2>
+                            <br><!--<hr class="star-primary">-->
+                            <img style="max-height:500px;" src="http://nctu120.nctu.edu.tw/designuploads/img/011105.jpg" class="img-responsive img-centered" alt="">                        
+							<ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>2015-11-06 23:22:45                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-success close-vote-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<button onClick=$('.vote011105').trigger('click');  type="button" class="btn btn-success open-vote-button"><i class="fa fa-edit"></i> 投票</button>
+                        </div>
+						<!-- 011105  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="0215341" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>infinity</h2>
+                            <br><!--<hr class="star-primary">-->
+                            <img style="max-height:500px;" src="http://nctu120.nctu.edu.tw/designuploads/img/0215341.jpg" class="img-responsive img-centered" alt="">                        
+							<ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>2015-11-13 23:56:47                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-success close-vote-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<button onClick=$('.vote0215341').trigger('click');  type="button" class="btn btn-success open-vote-button"><i class="fa fa-edit"></i> 投票</button>
+                        </div>
+						<!-- 0215341  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="9047504" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>交大120週年校慶標誌</h2>
+                            <br><!--<hr class="star-primary">-->
+                            <img style="max-height:500px;" src="http://nctu120.nctu.edu.tw/designuploads/img/9047504.png" class="img-responsive img-centered" alt="">                        
+							<ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>2015-11-02 17:20:59                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-success close-vote-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<button onClick=$('.vote9047504').trigger('click');  type="button" class="btn btn-success open-vote-button"><i class="fa fa-edit"></i> 投票</button>
+                        </div>
+						<!--<!-- 9047504  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="0351066" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>出旗制勝．笑傲江狐</h2>
+                            <br><!--<hr class="star-primary">-->
+                            <img style="max-height:500px;" src="http://nctu120.nctu.edu.tw/designuploads/img/0351066.jpg" class="img-responsive img-centered" alt="">                        
+							<ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>2015-11-13 04:42:19                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-success close-vote-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<button onClick=$('.vote0351066').trigger('click');  type="button" class="btn btn-success open-vote-button"><i class="fa fa-edit"></i> 投票</button>
+                        </div>
+						<!-- 0351066  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="0210028" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>思源</h2>
+                            <br><!--<hr class="star-primary">-->
+                            <img style="max-height:500px;" src="http://nctu120.nctu.edu.tw/designuploads/img/0210028.jpg" class="img-responsive img-centered" alt="">                        
+							<ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>2015-11-13 23:58:14                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-success close-vote-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<button onClick=$('.vote0210028').trigger('click');  type="button" class="btn btn-success open-vote-button"><i class="fa fa-edit"></i> 投票</button>
+                        </div>
+						<!-- 0210028  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="stuID_04" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>交大120週年校慶標誌</h2>
+                            <br><!--<hr class="star-primary">-->
+                            <img style="max-height:500px;" src="http://nctu120.nctu.edu.tw/designuploads/img/stuID_04.jpg" class="img-responsive img-centered" alt="">                        
+							<ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>2015-11-13 23:59:01                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-success close-vote-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<button onClick=$('.votestuID_04').trigger('click');  type="button" class="btn btn-success open-vote-button"><i class="fa fa-edit"></i> 投票</button>
+                        </div>
+						<!-- stuID_04  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="0451554" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>狐狸與鐵鎚</h2>
+                            <br><!--<hr class="star-primary">-->
+                            <img style="max-height:500px;" src="http://nctu120.nctu.edu.tw/designuploads/img/0451554.jpg" class="img-responsive img-centered" alt="">                        
+							<ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>2015-11-10 16:37:45                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-success close-vote-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<button onClick=$('.vote0451554').trigger('click');  type="button" class="btn btn-success open-vote-button"><i class="fa fa-edit"></i> 投票</button>
+                        </div>
+						<!-- 0451554  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="E9610" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>心手相連交大120</h2>
+                            <br><!--<hr class="star-primary">-->
+                            <img style="max-height:500px;" src="http://nctu120.nctu.edu.tw/designuploads/img/E9610.jpg" class="img-responsive img-centered" alt="">                        
+							<ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>2015-11-09 19:42:51                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-success close-vote-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<button onClick=$('.voteE9610').trigger('click');  type="button" class="btn btn-success open-vote-button"><i class="fa fa-edit"></i> 投票</button>
+                        </div>
+						<!-- E9610  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="0459203" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>120,Gear up!</h2>
+                            <br><!--<hr class="star-primary">-->
+                            <img style="max-height:500px;" src="http://nctu120.nctu.edu.tw/designuploads/img/0459203.jpg" class="img-responsive img-centered" alt="">                        
+							<ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>2015-11-13 13:29:43                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-success close-vote-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<button onClick=$('.vote0459203').trigger('click');  type="button" class="btn btn-success open-vote-button"><i class="fa fa-edit"></i> 投票</button>
+                        </div>
+						<!-- 0459203  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="portfolio-modal modal fade" id="0459234" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>國立交通大學校慶LOGO</h2>
+                            <br><!--<hr class="star-primary">-->
+                            <img style="max-height:500px;" src="http://nctu120.nctu.edu.tw/designuploads/img/0459234.jpg" class="img-responsive img-centered" alt="">                        
+							<ul class="list-inline item-details">
+                                <li>Date:
+                                    <strong>2015-11-13 23:56:43                                    </strong>
+                                </li>
+                            </ul>
+                            <button type="button" class="btn btn-success close-vote-button" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+							<button onClick=$('.vote0459234').trigger('click');  type="button" class="btn btn-success open-vote-button"><i class="fa fa-edit"></i> 投票</button>
+                        </div>
+						<!-- 0459234  -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="/javascripts/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="/javascripts/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/javascripts/classie.js"></script>
+    <script src="/javascripts/cbpAnimatedHeader.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="/javascripts/jqBootstrapValidation.js"></script>
+    <!--<script src="/javascripts/contact_me.js"></script>-->
+
+    <!-- Custom Theme JavaScript -->
+    <script src="/javascripts/freelancer.js"></script>
+	<script src="/javascripts/main.js"></script>
+    <script>
+
+	function test(){
+		alert('aa');
+	}
+
+	$('input[name=candidate_img]').change(function () {
+		readURL(this);
+	});
+	
+	function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $('#viewImg').attr('src', e.target.result);
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+	
+	$(".portfolio-link button").click(function()
+	{
+		var title = $('#'+this.value+" .modal-body h2").html();
+		$("#votepage h2").html(title);
+		$("#votepage .candidate_id").val(this.value);
+		$("#votecancel").val(this.value);
+	})
+	
+	$('#votecancel').click(function()
+	{
+		$("#"+$("#votecancel").val()+" .close-modal").trigger('click');
+	});
+	
+	$('form[name="sentMessage"]').submit(function () {
+		var student_id = $.trim($("input[name='student_id']").val());
+		var candidate_id = $.trim($("input[name='candidate_id']").val());
+		var phone = $.trim($("input[name='phone']").val());
+		var email = $.trim($("input[name='email']").val());
+		var position = $("#position option:selected").val();
+		
+		var found = false;
+			$.ajax({
+				async: false,
+				type: 'POST',
+				url: "votecheck.php",
+				data: { position: position, student_id: student_id, phone: phone, email: email, candidate_id: candidate_id },
+				success: function(data) {
+					if(data == 'true')
+					{
+						alert('投票成功 感謝您的參與');
+						found = true;
+					}
+					if(data == 'false')
+					{
+						alert("請檢查學號 / 工號 / 身分證字號\n\n在校生請輸入「學號」\n現職教職員請輸入「工號」\n校友請輸入「身分證字號」");
+						found = false;
+					}
+					if(data == 'exsit')
+					{
+						alert("你已經投過囉!!");
+						found = false;
+					}
+				}
+			});
+			
+			if(found)
+			{
+			  return true;	
+			}
+			else
+			{
+			  return false;
+			}
+			
+			event.preventDefault();
+	});
+	
+	/*
+	$('form[name="sendupload"]').submit(function () {
+
+		var name = $.trim($("input[name='name']").val());
+		var student_id = $.trim($("input[name='student_id']").val());
+		var department = $.trim($("input[name='department']").val());
+		var phone = $.trim($("input[name='phone']").val());
+		var ext_number = $.trim($("input[name='ext_number']").val());
+		var email = $.trim($("input[name='email']").val());
+		var candidate_registerform = $.trim($("input[name='candidate_registerform']").val());
+		var candidate_explanation = $.trim($("input[name='candidate_explanation']").val());
+		var candidate_consent = $.trim($("input[name='candidate_consent']").val());
+		var candidate_photo = $.trim($("input[name='candidate_photo']").val());
+
+		var found = false;
+			if(
+		       name.length > 0 &&	
+		       student_id.length > 0 &&	
+		       department.length > 0 &&	
+		       phone.length > 0 &&	
+		       ext_number.length > 0 &&	
+		       email.length > 0 &&	
+			   candidate_registerform.length > 0 &&
+			   candidate_explanation.length > 0 &&
+			   candidate_consent.length > 0 &&
+			   candidate_photo.length > 0)
+			{
+			   return true;
+			}
+			else
+			{
+			  var error_msg = "請上傳:\n\n";
+			  
+			  if(name.length<=0)
+			  {
+			    error_msg += "姓名\n";
+			  }
+			  if(student_id.length<=0)
+			  {
+			    error_msg += "學號/職員編號/身分證字號\n";
+			  }
+			  if(department.length<=0)
+			  {
+			    error_msg += "科系班別/服務單位\n";
+			  }
+			  if(phone.length<=0)
+			  {
+			    error_msg += "手機\n";
+			  }
+			  if(ext_number.length<=0)
+			  {
+			    error_msg += "分機號碼\n";
+			  }
+			  if(email.length<=0)
+			  {
+			    error_msg += "信箱\n";
+			  }
+			  if(candidate_registerform.length<=0)
+			  {
+			    error_msg += "活動報名表\n";
+			  }
+			  if(candidate_explanation.length<=0)
+			  {
+			    error_msg += "活動作品圖片及理念說明\n";
+			  }
+			  if(candidate_consent.length<=0)
+			  {
+			    error_msg += "活動同意書\n";
+			  }
+			  if(candidate_photo.length<=0)
+			  {
+			    error_msg += "作品圖擋\n";
+			  }
+			  alert(error_msg);
+			  return false;
+			}
+			//return false;
+
+			//name, student_id ,department ,phone ,ext_number ,email ,candidate_registerform ,candidate_explanation, candidate_consent, candidate_photo
+			var data = {
+				'name': name,
+				'student_id': student_id,
+				'department': department,
+				'phone': phone,
+				'ext_number': ext_number,
+				'email': email,
+				'candidate_registerform': candidate_registerform,
+				'candidate_explanation': candidate_explanation,
+				'candidate_consent': candidate_consent,
+				'candidate_photo': candidate_photo,
+			};
+			console.log(data);
+	});
+	*/
+	</script>
+</body>
+
+</html>
